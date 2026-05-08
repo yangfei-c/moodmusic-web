@@ -10,9 +10,6 @@ __pycache__/
 .venv/
 venv/
 
-# Backend data / model weights
-backend/data/
-*.ckpt
 *.pt
 *.pth
 *.npy
@@ -28,7 +25,7 @@ backend/data/
 # Frontend
 frontend/node_modules/
 frontend/dist/
-
+backend/data/
 # Upload scripts with keys
 scripts/upload.py
 
