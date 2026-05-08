@@ -1,34 +1,18 @@
 # IDE
 .idea/
-.vscode/
-frontend/.vscode/
-
 # Python
 __pycache__/
 *.pyc
 .env
 .venv/
 venv/
-
-*.pt
-*.pth
-*.npy
-*.npz
-
-# Audio
-*.mp3
-*.wav
-*.flac
-*.ogg
-*.m4a
-
 # Frontend
 frontend/node_modules/
 frontend/dist/
+# Backend
 backend/data/
 # Upload scripts with keys
 scripts/upload.py
-
 # System
 .DS_Store
 Thumbs.db
