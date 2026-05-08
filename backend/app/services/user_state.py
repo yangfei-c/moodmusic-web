@@ -13,7 +13,7 @@ from app.config import (
     text_model_name,
 )
 from app.services.utils import clip_va, interpolate_va, make_tag_prior
-from text_va.inference import load_model_and_tokenizer, predict_emotion
+from app.text_va.inference import load_model_and_tokenizer, predict_emotion
 
 
 class UserStateEstimator:

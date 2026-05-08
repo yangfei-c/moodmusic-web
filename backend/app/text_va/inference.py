@@ -13,9 +13,9 @@ except Exception:
     pass
 
 try:
-    from .trainer import TextVATrainer
+    from app.text_va.trainer import TextVATrainer
 except ImportError:
-    from trainer import TextVATrainer
+    from app.text_va.trainer import TextVATrainer
 
 
 def load_model_and_tokenizer(ckpt_path, model_name="xlm-roberta-base"):

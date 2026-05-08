@@ -17,9 +17,10 @@ def normalize_track(raw: Dict[str, object]) -> Optional[Dict[str, object]]:
         vector = _to_float_list(vec28[:28])
     except (TypeError, ValueError):
         return None
-
+    audio_url = raw.get("audio_url") or raw.get("song_url") or raw.get("song_path") or ""
     return {
         "song_id": str(raw.get("song_id", "Unknown")),
+        "audio_url": str(audio_url),
         "song_path": str(raw.get("song_path", "")),
         "display_tags": list(raw.get("display_tags", [])) if isinstance(raw.get("display_tags", []), list) else [],
         "va": [vector[0], vector[1]],

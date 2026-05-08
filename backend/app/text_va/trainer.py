@@ -5,9 +5,9 @@ from torch.optim import AdamW
 from transformers import get_linear_schedule_with_warmup, AutoConfig
 
 try:
-    from .model import XLMRobertaVA
+    from app.text_va.model import XLMRobertaVA
 except ImportError:
-    from model import XLMRobertaVA
+    from app.text_va.model import XLMRobertaVA
 
 
 class TextVATrainer(pl.LightningModule):
