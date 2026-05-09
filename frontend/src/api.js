@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE || "/api";
+const API_BASE = "http://127.0.0.1:8080";
 
 export async function recommendMusic(payload) {
   const response = await fetch(`${API_BASE}/recommend`, {

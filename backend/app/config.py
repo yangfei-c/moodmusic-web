@@ -6,8 +6,8 @@ current_dir = Path(__file__).resolve().parent
 project_root = current_dir.parents[1]
 
 # Paths
-music_db_path = project_root / "data"  / "semantic_db.json"
-text_ckpt = project_root / "data"  / "last.ckpt"
+music_db_path = current_dir / "data"  / "semantic_db.json"
+text_ckpt = current_dir / "data"  / "last.ckpt"
 
 # Text VA model
 text_model_name = "xlm-roberta-base"
