@@ -102,6 +102,7 @@ class RecommenderService:
                 "audio_url": track.get("audio_url", ""),
                 "song_path": track.get("song_path", ""),
                 "display_tags": track.get("display_tags", []),
+                "tag26": track.get("tag26", []),
                 "va": [float(z_i[0]), float(z_i[1])],
                 "valence": float(z_i[0]),
                 "arousal": float(z_i[1]),

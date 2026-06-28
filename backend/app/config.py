@@ -3,11 +3,12 @@ from __future__ import annotations
 from pathlib import Path
 
 current_dir = Path(__file__).resolve().parent
-backend_root = current_dir.parents[0]
+backend_root = current_dir.parent
 
 # Paths
-music_db_path = backend_root / "data"  / "semantic_db.json"
-text_ckpt =backend_root/ "data"  / "last.ckpt"
+music_db_path = backend_root / "data" / "semantic_db.json"
+text_ckpt = backend_root / "data" / "last.ckpt"
+feedback_log_path = backend_root / "data" / "feedback_events.jsonl"
 
 # Text VA model
 text_model_name = "xlm-roberta-base"
@@ -16,8 +17,9 @@ text_max_length = 128
 # Strategy
 strategies = ["maintain", "calm", "energize", "comfort"]
 strength = 0.5
+recommendation_pool_size = 10
 
-#Tag List
+# Tag List
 tags_26 = [
     "ambient", "classical", "electronic", "folk", "hiphop", "jazz",
     "metal", "pop", "rock", "soundtrack",
@@ -40,11 +42,11 @@ strategy_tag = {
 prototype_top_percent = 0.05
 prototype_alpha = 10.0
 text_list = [
-    {"text": "我现在有点低落，想听点能慢慢安慰我的音乐。", "intent": "comfort"},
+    {"text": "我现在有点低落。", "intent": "comfort"},
     {"text": "I feel tired and quiet tonight.", "intent": "comfort"},
 ]
 
-#diversity
+# Diversity
 diversity_weights = {
     "关闭": 0.00,
     "低": 0.15,

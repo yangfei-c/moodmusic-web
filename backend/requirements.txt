@@ -1,0 +1,7 @@
+fastapi
+numpy
+pydantic
+pytorch-lightning
+torch
+transformers
+uvicorn
