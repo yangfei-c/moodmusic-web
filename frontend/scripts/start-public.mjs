@@ -97,9 +97,14 @@ function startVite() {
       cwd: process.cwd(),
 
       env: {
-        ...process.env,
-        __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS: publicHost
-      },
+          ...process.env,
+
+          // 自动允许本次 cpolar 随机域名
+          __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS: publicHost,
+
+          // 告诉 vite.config.js：这是公网隧道模式
+          VITE_PUBLIC_TUNNEL: '1'
+        },
 
       windowsHide: true,
 

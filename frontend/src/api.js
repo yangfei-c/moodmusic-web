@@ -1,7 +1,19 @@
-const API_BASE = "http://127.0.0.1:8080";
+const API_BASE = "/api";
 
 export async function recommendMusic(payload) {
-  const response = await fetch(`${API_BASE}/recommend`, {
+  return request("/recommend", payload);
+}
+
+export async function nextRecommendation(sessionId, payload) {
+  return request(`/recommend/${sessionId}/next`, payload);
+}
+
+export async function submitFeedback(payload) {
+  return request("/feedback", payload);
+}
+
+async function request(path, payload) {
+  const response = await fetch(`${API_BASE}${path}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
