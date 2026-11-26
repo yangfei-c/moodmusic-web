@@ -137,7 +137,7 @@ function handleEnded() {
 <template>
   <main class="page">
     <header class="app-header">
-      <h1><span class="title-icon">♪</span> 情绪调节型音乐推荐</h1>
+      <h1><span class="title-icon">♪</span> MoodMusic · 情绪调节型音乐推荐</h1>
     </header>
 
     <div class="workspace">

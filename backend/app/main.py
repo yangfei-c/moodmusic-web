@@ -36,7 +36,7 @@ class FeedbackRequest(BaseModel):
 
 
 app = FastAPI(
-    title="EMMR API",
+    title="MoodMusic-Web API",
     description="Emotion-regulation music recommendation backend",
     version="1.0.0",
 )
